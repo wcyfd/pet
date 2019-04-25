@@ -6,10 +6,14 @@ namespace pet {
 		public attributeUI: pet.AttributeUI;
 		public menuUI: pet.MenuUI;
 		public worldUI: pet.WorldUI;
+		public cageUI: pet.CageUI;
+
+		public petModule: pet.PetModule;
 
 
 		public constructor() {
 			super();
+			this.petModule = new pet.PetModule();
 		}
 
 		protected createChildren(): void {
@@ -23,17 +27,23 @@ namespace pet {
 			back.graphics.beginFill(0xFFFFFF);
 			back.graphics.drawRect(0, 0, GameData.width, GameData.height);
 			back.graphics.endFill();
-		}
 
-		protected childrenCreated(): void {
-			super.childrenCreated();
-
+			this.petModule.attriubteUI = this.attributeUI;
+			this.petModule.cageUI = this.cageUI;
+			this.addChild(this.petModule);
 		}
 
 		protected partAdded(partName: string, instance: any): void {
 			super.partAdded(partName, instance);
 			console.log(partName);
 		}
+
+		protected childrenCreated(): void {
+			super.childrenCreated();
+
+			this.petModule.selectPet(1);
+		}
+
 	}
 
 }

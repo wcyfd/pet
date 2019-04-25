@@ -10,6 +10,14 @@ namespace pet {
 		protected partAdd(partName: string, instance: any): void {
 			super.partAdded(partName, instance);
 		}
+
+		public onChangePet(evt: egret.Event): void {
+			let index = GameData.currentPetIndex;
+			let animal: Animal = GameData.animals[index];
+
+			this.weight.text = animal.weight + "";
+			this.age.text = animal.age + "";
+		}
 	}
 
 }

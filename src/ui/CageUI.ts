@@ -21,7 +21,10 @@ module pet {
 
 		protected partAdded(partName: string, instance: any): void {
 			super.partAdded(partName, instance);
+		}
 
+		public onChangePet(evt: egret.Event): void {
+			this.petList.selectedIndex = GameData.currentPetIndex;
 		}
 	}
 }
