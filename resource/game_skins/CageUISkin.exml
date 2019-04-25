@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="CageUISkin" width="200" height="300" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:List id="petList" width="200" height="300" x="0" anchorOffsetY="0" anchorOffsetX="0">
+		<e:ArrayCollection>
+			<e:Array>
+				<e:Object test="1"/>
+			</e:Array>
+		</e:ArrayCollection>
+	</e:List>
+</e:Skin>

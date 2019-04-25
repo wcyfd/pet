@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="AttributeUI" width="310" height="64" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Label text="体重:" x="0" y="17" textColor="0x000000" bold="true"/>
+	<e:Label id="weight" text="0" x="81.8" y="17" textColor="0x000000" bold="true"/>
+	<e:Label text="kg" x="111.6" y="17" textColor="0x000000" bold="true"/>
+	<e:Label text="年龄:" x="156.4" y="17" textColor="0x000000" bold="true"/>
+	<e:Label id="age" text="0" x="238.20000000000002" y="17" textColor="0x000000" bold="true"/>
+	<e:Label text="岁" x="268" y="17" textColor="0x000000" bold="true"/>
+</e:Skin>

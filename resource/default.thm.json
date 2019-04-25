@@ -12,7 +12,12 @@
 		"eui.ToggleSwitch": "resource/eui_skins/ToggleSwitchSkin.exml",
 		"eui.VScrollBar": "resource/eui_skins/VScrollBarSkin.exml",
 		"eui.VSlider": "resource/eui_skins/VSliderSkin.exml",
-		"eui.ItemRenderer": "resource/eui_skins/ItemRendererSkin.exml"
+		"eui.ItemRenderer": "resource/eui_skins/ItemRendererSkin.exml",
+		"pet.AttributeUI": "resource/game_skins/AttributeUISkin.exml",
+		"pet.GameSceneView": "resource/game_skins/GameSceneViewSkin.exml",
+		"pet.MenuUI": "resource/game_skins/MenuUISkin.exml",
+		"pet.WorldUI": "resource/game_skins/WorldUISkin.exml",
+		"pet.CageUI": "resource/game_skins/CageUISkin.exml"
 	},
 	"autoGenerateExmlsList": true,
 	"exmls": [
@@ -28,7 +33,12 @@
 		"resource/eui_skins/TextInputSkin.exml",
 		"resource/eui_skins/ToggleSwitchSkin.exml",
 		"resource/eui_skins/VScrollBarSkin.exml",
-		"resource/eui_skins/VSliderSkin.exml"
+		"resource/eui_skins/VSliderSkin.exml",
+		"resource/game_skins/AttributeUISkin.exml",
+		"resource/game_skins/CageUISkin.exml",
+		"resource/game_skins/GameSceneViewSkin.exml",
+		"resource/game_skins/MenuUISkin.exml",
+		"resource/game_skins/WorldUISkin.exml"
 	],
 	"path": "resource/default.thm.json"
 }

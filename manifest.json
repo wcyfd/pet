@@ -10,10 +10,17 @@
 		"libs/modules/promise/promise.js"
 	],
 	"game": [
+		"bin-debug/game/GameData.js",
 		"bin-debug/AssetAdapter.js",
-		"bin-debug/LoadingUI.js",
+		"bin-debug/Main.1.js",
 		"bin-debug/Main.js",
 		"bin-debug/Platform.js",
-		"bin-debug/ThemeAdapter.js"
+		"bin-debug/ThemeAdapter.js",
+		"bin-debug/LoadingUI.js",
+		"bin-debug/game/GameSceneView.js",
+		"bin-debug/ui/AttributeUI.js",
+		"bin-debug/ui/CageUI.js",
+		"bin-debug/ui/MenuUI.js",
+		"bin-debug/ui/WorldUI.js"
 	]
 }
