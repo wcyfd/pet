@@ -1,5 +1,5 @@
 namespace pet {
-	export class MenuUI extends eui.Component {
+	export class MenuUI extends pet.BaseUI {
 		public shop: eui.Button;
 
 		public constructor() {
@@ -8,8 +8,6 @@ namespace pet {
 
 		protected createChildren(): void {
 			super.createChildren();
-
-
 		}
 
 		protected childrenCreated(): void {

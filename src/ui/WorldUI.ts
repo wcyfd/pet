@@ -1,5 +1,5 @@
 module pet {
-	export class WorldUI extends eui.Component {
+	export class WorldUI extends pet.BaseUI {
 		public infoList: eui.List;
 
 		public constructor() {
@@ -9,7 +9,7 @@ module pet {
 		protected createChildren(): void {
 			super.createChildren();
 
-
+			this.module.addEventListener(GameData.EVT_CHANGE_PET, this.onUpdateView, this);
 		}
 
 		protected childrenCreated(): void {

@@ -2,6 +2,10 @@ module pet {
 	export class PetModule extends eui.Component {
 		public attriubteUI: pet.AttributeUI;
 		public cageUI: pet.CageUI;
+		public worldUI: pet.WorldUI;
+		public menuUI: pet.MenuUI;
+		public switchUI: pet.SwitchUI;
+
 		public constructor() {
 			super();
 		}
@@ -9,14 +13,13 @@ module pet {
 		protected childrenCreated(): void {
 			super.childrenCreated();
 
-			this.addEventListener(GameData.EVT_CHANGE_PET, this.attriubteUI.onChangePet, this.attriubteUI);
-			this.addEventListener(GameData.EVT_CHANGE_PET, this.cageUI.onChangePet, this.cageUI);
+			this.cageUI.addEventListener(GameData.EVT_CHANGE_PET, this.onUIChange, this);
 		}
 
-
-		public selectPet(index: number): void {
+		public onUIChange(evt: egret.Event): void {
+			let index = evt.data.selectedIndex;
 			GameData.currentPetIndex = index;
-			this.dispatchEvent(new egret.Event(GameData.EVT_CHANGE_PET, false, false));
+			this.dispatchEventWith(GameData.EVT_CHANGE_PET, false, {}, false);
 		}
 	}
 

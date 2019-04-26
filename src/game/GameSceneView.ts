@@ -7,6 +7,8 @@ namespace pet {
 		public menuUI: pet.MenuUI;
 		public worldUI: pet.WorldUI;
 		public cageUI: pet.CageUI;
+		public switchUI: pet.SwitchUI;
+
 
 		public petModule: pet.PetModule;
 
@@ -19,6 +21,8 @@ namespace pet {
 		protected createChildren(): void {
 			super.createChildren();
 
+			console.log("gamesceneview createChildren");
+
 			let back = new egret.Sprite();
 			this.addChild(back);
 			this.setChildIndex(back, 0);
@@ -30,18 +34,41 @@ namespace pet {
 
 			this.petModule.attriubteUI = this.attributeUI;
 			this.petModule.cageUI = this.cageUI;
+			this.petModule.menuUI = this.menuUI;
+			this.petModule.worldUI = this.worldUI;
+			this.petModule.switchUI = this.switchUI;
 			this.addChild(this.petModule);
 		}
 
 		protected partAdded(partName: string, instance: any): void {
 			super.partAdded(partName, instance);
-			console.log(partName);
+			console.log("gamesceneview partAdded");
+			if (partName == "attributeUI") {
+				this.attributeUI.module = this.petModule;
+			}
+
+			if (partName == "menuUI") {
+				this.menuUI.module = this.petModule;
+			}
+
+			if (partName == "worldUI") {
+				this.worldUI.module = this.petModule;
+			}
+
+			if (partName == "cageUI") {
+				this.cageUI.module = this.petModule;
+			}
+
+			if (partName == "switchUI") {
+				this.switchUI.module = this.petModule;
+			}
+			// console.log(partName);
 		}
 
 		protected childrenCreated(): void {
 			super.childrenCreated();
-
-			this.petModule.selectPet(1);
+			console.log("gamesceneview childrenCreated");
+			this.cageUI.petList.selectedIndex = 0;
 		}
 
 	}
