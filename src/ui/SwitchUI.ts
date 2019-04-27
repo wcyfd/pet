@@ -25,6 +25,11 @@ module pet {
 			if (partName == "detailUI") {
 				this.detailUI.module = this.module;
 			}
+
+			if(partName=="tabBar")
+			{
+				
+			}
 		}
 
 		public onTabChange(evt: eui.ItemTapEvent): void {

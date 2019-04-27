@@ -32,11 +32,7 @@ namespace pet {
 			back.graphics.drawRect(0, 0, GameData.width, GameData.height);
 			back.graphics.endFill();
 
-			this.petModule.attriubteUI = this.attributeUI;
-			this.petModule.cageUI = this.cageUI;
-			this.petModule.menuUI = this.menuUI;
-			this.petModule.worldUI = this.worldUI;
-			this.petModule.switchUI = this.switchUI;
+			this.petModule.scene = this;
 			this.addChild(this.petModule);
 		}
 

@@ -2,4 +2,5 @@
 <e:Skin class="SwitchUISkin" width="400" height="300" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:pet="pet.*">
 	<e:TabBar id="tabBar" width="400" height="300" x="0" y="0" anchorOffsetX="0" anchorOffsetY="0" itemRendererSkinName="DetailUISkin"/>
 	<pet:DetailUI id="detailUI" width="400" height="300" y="-1" anchorOffsetX="0" anchorOffsetY="0"/>
+
 </e:Skin>
