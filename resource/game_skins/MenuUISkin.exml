@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="MenuUISkin" width="640" height="50" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Button id="shop" label="商店" x="1" y="1" enabled="true"/>
+<e:Skin class="MenuUISkin" width="200" height="265" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:TabBar id="menuTabBar" width="200" height="263" x="0" y="0" itemRendererSkinName="MenuItemUISkin" anchorOffsetY="0">
+		<e:layout>
+			<e:TileLayout orientation="rows"/>
+		</e:layout>
+	</e:TabBar>
 </e:Skin>

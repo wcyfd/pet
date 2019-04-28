@@ -11,7 +11,7 @@ namespace pet {
 		protected createChildren(): void {
 			super.createChildren();
 
-			this.module.addEventListener(GameData.EVT_CHANGE_PET, this.onUpdateView, this);
+			this.module.addEventListener(GameData.EVT_SWITCH_PET, this.onSwitchPet, this);
 		}
 
 		protected partAdd(partName: string, instance: any): void {
@@ -19,7 +19,7 @@ namespace pet {
 
 		}
 
-		public onUpdateView(evt: egret.Event): void {
+		public onSwitchPet(evt: egret.Event): void {
 			let animal: Animal = GameData.animals[GameData.currentPetIndex];
 
 			this.weight.text = animal.weight + "";

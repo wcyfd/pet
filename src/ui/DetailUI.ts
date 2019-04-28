@@ -8,7 +8,7 @@ module pet {
 
 		protected createChildren(): void {
 			super.createChildren();
-			this.module.addEventListener(GameData.EVT_CHANGE_PET, this.onUpdateView, this);
+			this.module.addEventListener(GameData.EVT_SWITCH_PET, this.onSwitchPet, this);
 		}
 
 		public childrenCreated(): void {
@@ -16,7 +16,7 @@ module pet {
 			this.attributeList.dataProvider = new eui.ArrayCollection();
 		}
 
-		public onUpdateView(evt: egret.Event): void {
+		public onSwitchPet(evt: egret.Event): void {
 			let animal = GameData.animals[GameData.currentPetIndex];
 			let collection: eui.ArrayCollection = this.attributeList.dataProvider as eui.ArrayCollection;
 			collection.removeAll();

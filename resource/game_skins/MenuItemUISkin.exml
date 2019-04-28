@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MenuItemUISkin" width="74" height="30" xmlns:e="http://ns.egret.com/eui" states="up,down" >
+	<e:Label text="Label" x="0" y="0" text.up="{data}" text.down="{data}" textColor.down="0xff0505" italic.down="true" textColor.up="0x000000"/>
+</e:Skin>

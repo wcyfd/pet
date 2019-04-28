@@ -19,7 +19,9 @@
 		"pet.WorldUI": "resource/game_skins/WorldUISkin.exml",
 		"pet.CageUI": "resource/game_skins/CageUISkin.exml",
 		"pet.DetailUI": "resource/game_skins/DetailUISkin.exml",
-		"pet.SwitchUI": "resource/game_skins/SwitchUISkin.exml"
+		"pet.SwitchUI": "resource/game_skins/SwitchUISkin.exml",
+		"pet.TestUI": "resource/game_skins/TestUISkin.exml",
+		"pet.TabItemUI": "resource/game_skins/TabItemSkin.exml"
 	},
 	"autoGenerateExmlsList": true,
 	"exmls": [
@@ -40,8 +42,11 @@
 		"resource/game_skins/CageUISkin.exml",
 		"resource/game_skins/DetailUISkin.exml",
 		"resource/game_skins/GameSceneViewSkin.exml",
+		"resource/game_skins/MenuItemUISkin.exml",
 		"resource/game_skins/MenuUISkin.exml",
 		"resource/game_skins/SwitchUISkin.exml",
+		"resource/game_skins/TabItemSkin.exml",
+		"resource/game_skins/TestUISkin.exml",
 		"resource/game_skins/WorldUISkin.exml"
 	],
 	"path": "resource/default.thm.json"

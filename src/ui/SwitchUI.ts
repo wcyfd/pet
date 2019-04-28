@@ -11,7 +11,6 @@ module pet {
 		public createChildren(): void {
 			super.createChildren();
 			console.info("switchUI createChildren");
-			this.module.addEventListener(GameData.EVT_CHANGE_PET, this.onUpdateView, this);
 		}
 
 		public childrenCreated(): void {
@@ -26,9 +25,8 @@ module pet {
 				this.detailUI.module = this.module;
 			}
 
-			if(partName=="tabBar")
-			{
-				
+			if (partName == "tabBar") {
+
 			}
 		}
 
@@ -36,8 +34,5 @@ module pet {
 
 		}
 
-		public onUpdateView(evt: egret.Event): void {
-
-		}
 	}
 }

@@ -15,15 +15,35 @@ class GameData {
 			a.age = 12;
 			a.weight = 10;
 			GameData.animals.push(a);
+			GameData.petList.addItem(a.name);
 		}
+
+		GameData.menuItemList.addItem('商店');
+		GameData.menuItemList.addItem('宠物');
+		GameData.menuItemList.addItem('区域');
+
+		GameData.shopItemList.addItem('笼子');
+		GameData.shopItemList.addItem('粮');
+		GameData.shopItemList.addItem('窝');
+
+		GameData.firstLayer.addItem(GameData.shopItemList);
+		GameData.firstLayer.addItem(GameData.petList);
+		GameData.firstLayer.addItem(GameData.areaList);
 	}
 	public static width: number = 0;
 	public static height: number = 0;
 
 	public static currentPetIndex: number = 0;
-	public static petList: eui.ArrayCollection = new eui.ArrayCollection(["pet1", "pet2"]);
+	public static menuItemList: eui.ArrayCollection = new eui.ArrayCollection();
+
+	public static petList: eui.ArrayCollection = new eui.ArrayCollection();
+	public static shopItemList: eui.ArrayCollection = new eui.ArrayCollection();
+	public static areaList: eui.ArrayCollection = new eui.ArrayCollection();
+
 	public static infoLists: eui.ArrayCollection[] = [];
 	public static animals: pet.Animal[] = [];
+	public static firstLayer: eui.ArrayCollection = new eui.ArrayCollection();
 
-	public static EVT_CHANGE_PET: string = "change_pet";
+	public static EVT_SWITCH_PET: string = "switch_pet";
+	public static EVT_CHOOSE_MENU_ITEM: string = "change_first_list";
 }

@@ -11,21 +11,23 @@
 	],
 	"game": [
 		"bin-debug/ui/BaseUI.js",
-		"bin-debug/game/GameSceneView.js",
+		"bin-debug/module/PetModule.js",
 		"bin-debug/Main.1.js",
 		"bin-debug/Main.js",
 		"bin-debug/Platform.js",
 		"bin-debug/ThemeAdapter.js",
 		"bin-debug/game/Animal.js",
 		"bin-debug/game/GameData.js",
+		"bin-debug/game/GameSceneView.js",
 		"bin-debug/LoadingUI.js",
-		"bin-debug/module/PetModule.js",
 		"bin-debug/ui/AttributeUI.js",
 		"bin-debug/AssetAdapter.js",
 		"bin-debug/ui/CageUI.js",
 		"bin-debug/ui/DetailUI.js",
 		"bin-debug/ui/MenuUI.js",
 		"bin-debug/ui/SwitchUI.js",
+		"bin-debug/ui/TabItemUI.js",
+		"bin-debug/ui/TestUI.js",
 		"bin-debug/ui/WorldUI.js"
 	]
 }

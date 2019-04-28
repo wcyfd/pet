@@ -9,7 +9,6 @@ module pet {
 		protected createChildren(): void {
 			super.createChildren();
 
-			this.module.addEventListener(GameData.EVT_CHANGE_PET, this.onUpdateView, this);
 		}
 
 		protected childrenCreated(): void {

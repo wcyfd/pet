@@ -6,8 +6,6 @@ module pet {
 			this.module = null;
 		}
 
-		public onUpdateView(evt: egret.Event): void {
 
-		}
 	}
 }
