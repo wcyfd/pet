@@ -3,7 +3,6 @@ module pet {
 		public tabBar: eui.TabBar;
 		public detailUI: pet.DetailUI;
 
-
 		public constructor() {
 			super();
 		}
