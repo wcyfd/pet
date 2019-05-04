@@ -10,8 +10,9 @@ namespace pet {
 			super.createChildren();
 
 			//赋值菜单数据
+			this.menuTabBar.itemRendererSkinName = MenuItemUISkin;
 			this.menuTabBar.dataProvider = GameData.menuItemList;
-			this.menuTabBar.addEventListener(eui.ItemTapEvent.ITEM_TAP, this.onBarItemTap, this);
+			this.menuTabBar.addEventListener(eui.ItemTapEvent.ITEM_TAP, this.onClickMenuItem, this);
 		}
 
 		protected childrenCreated(): void {
@@ -24,10 +25,13 @@ namespace pet {
 
 		}
 
-		private onBarItemTap(e: eui.ItemTapEvent): void {
+		private onClickMenuItem(e: eui.ItemTapEvent): void {
 			console.log(e.itemIndex);
 
-			this.dispatchEventWith(GameData.EVT_CHOOSE_MENU_ITEM, false, { index: e.itemIndex }, false);
+			GameData.menuState = e.itemIndex;
+
+			this.dispatchEventWith(GameData.EVT_CHOOSE_MENU_ITEM, false, {}, false);
+
 		}
 	}
 

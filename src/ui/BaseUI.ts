@@ -6,6 +6,8 @@ module pet {
 			this.module = null;
 		}
 
-
+		public removeChildren(): void {
+			super.removeChildren();
+		}
 	}
 }

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ShopLevel2UISkin" width="400" height="350" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Scroller width="399" height="300.58" y="0" anchorOffsetX="0" anchorOffsetY="0">
+		<e:List id="list" anchorOffsetY="0" height="291.49"/>
+	</e:Scroller>
+	<e:Button id="buy" label="购买" x="300" y="300.58"/>
+</e:Skin>

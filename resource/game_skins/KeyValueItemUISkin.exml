@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="KeyValueItemUISkin" width="312" height="53" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Label id="key" text="{data.key}" x="4" y="11" anchorOffsetX="0" width="137" textColor="0x050000"/>
+	<e:Label id="value" text="{data.value}" x="145" y="12" textColor="0x070000"/>
+</e:Skin>

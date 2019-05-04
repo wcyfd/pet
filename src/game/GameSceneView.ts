@@ -3,11 +3,10 @@ namespace pet {
 	 * 场景切换容器
 	 */
 	export class GameSceneView extends eui.Component {
-		public attributeUI: pet.AttributeUI;
 		public menuUI: pet.MenuUI;
 		public worldUI: pet.WorldUI;
-		public cageUI: pet.CageUI;
-		public switchUI: pet.SwitchUI;
+		public level1UI: pet.Level1UI;
+		public level2UI: pet.Level2UI;
 
 
 		public petModule: pet.PetModule;
@@ -39,32 +38,39 @@ namespace pet {
 		protected partAdded(partName: string, instance: any): void {
 			super.partAdded(partName, instance);
 			console.log("gamesceneview partAdded");
-			if (partName == "attributeUI") {
-				this.attributeUI.module = this.petModule;
+
+			if (partName.indexOf("UI") != -1) {
+				let baseUI = instance as pet.BaseUI;
+				baseUI.module = this.petModule;
+
+				console.info(partName + " bind module");
 			}
 
-			if (partName == "menuUI") {
-				this.menuUI.module = this.petModule;
-			}
+			// if (partName == "attributeUI") {
+			// 	this.attributeUI.module = this.petModule;
+			// }
 
-			if (partName == "worldUI") {
-				this.worldUI.module = this.petModule;
-			}
+			// if (partName == "menuUI") {
+			// 	this.menuUI.module = this.petModule;
+			// }
 
-			if (partName == "cageUI") {
-				this.cageUI.module = this.petModule;
-			}
+			// if (partName == "worldUI") {
+			// 	this.worldUI.module = this.petModule;
+			// }
 
-			if (partName == "switchUI") {
-				this.switchUI.module = this.petModule;
-			}
+			// if (partName == "level1UI") {
+			// 	this.level1UI.module = this.petModule;
+			// }
+
+			// if (partName == "switchUI") {
+			// 	this.switchUI.module = this.petModule;
+			// }
 			// console.log(partName);
 		}
 
 		protected childrenCreated(): void {
 			super.childrenCreated();
 			console.log("gamesceneview childrenCreated");
-			this.cageUI.petList.selectedIndex = 0;
 		}
 
 	}

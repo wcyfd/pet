@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="PetLevel2UISkin" width="400" height="361" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Scroller width="399" height="299" x="1" anchorOffsetX="0" anchorOffsetY="0">
+		<e:List id="list"/>
+	</e:Scroller>
+	<e:Button id="food" label="喂食" x="299" y="310"/>
+</e:Skin>

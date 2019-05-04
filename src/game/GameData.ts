@@ -5,45 +5,91 @@ class GameData {
 		GameData.height = layer.stage.stageHeight;
 		console.log(`宽度 ${GameData.width}, 高度 ${GameData.height}`);
 
-		for (let i = 0; i < GameData.petList.length; i++) {
+		for (let i = 0; i < GameData.petNameList.length; i++) {
 			GameData.infoLists[0] = new eui.ArrayCollection(["something"]);
 		}
+
+
+		GameData.initProto();
+
+		GameData.menuItemList.addItem('宠物');
+		GameData.menuItemList.addItem('商店');
+		GameData.menuItemList.addItem('背包');
+		GameData.menuItemList.addItem('繁殖');
 
 		for (let i = 0; i < 10; i++) {
 			let a = new pet.Animal();
 			a.name = "name" + i;
-			a.age = 12;
-			a.weight = 10;
-			GameData.animals.push(a);
-			GameData.petList.addItem(a.name);
+			a.age = 12 + i;
+			a.weight = 10 + i;
+			GameData.animals.addItem(a);
+			GameData.petNameList.addItem(a.name);
 		}
 
-		GameData.menuItemList.addItem('商店');
-		GameData.menuItemList.addItem('宠物');
-		GameData.menuItemList.addItem('区域');
+		for (let i = 1; i <= 3; i++) {
+			let s = pet.ShopItem.createShopItem(i);
+			GameData.shops.addItem(s);
+			GameData.shopNameList.addItem(s.proto.name);
+		}
 
-		GameData.shopItemList.addItem('笼子');
-		GameData.shopItemList.addItem('粮');
-		GameData.shopItemList.addItem('窝');
 
-		GameData.firstLayer.addItem(GameData.shopItemList);
-		GameData.firstLayer.addItem(GameData.petList);
-		GameData.firstLayer.addItem(GameData.areaList);
+		GameData.level1Data.addItem(GameData.petNameList);
+		GameData.level1Data.addItem(GameData.shopNameList);
+		GameData.level1Data.addItem(GameData.propNameList);
+
+		GameData.level2Data.addItem(GameData.animals);
+		GameData.level2Data.addItem(GameData.shops);
+		GameData.level2Data.addItem(GameData.props);
+
+
+	}
+
+
+
+	private static initProto(): void {
+
+		let createPropProto = (name: string, price: number, id: number, context: string): pet.PropProto => {
+			let proto = new pet.PropProto();
+			proto.id = id;
+			proto.name = name;
+			proto.price = price;
+			proto.context = context;
+			pet.ProtoManager.propProtos[proto.id] = proto;
+			proto.init();
+			return proto;
+		}
+		for (let i = 1; i <= 10; i++) {
+			createPropProto("道具" + i, 10 + i, i, "context" + i);
+		}
 	}
 	public static width: number = 0;
 	public static height: number = 0;
 
 	public static currentPetIndex: number = 0;
+	//菜单
 	public static menuItemList: eui.ArrayCollection = new eui.ArrayCollection();
 
-	public static petList: eui.ArrayCollection = new eui.ArrayCollection();
-	public static shopItemList: eui.ArrayCollection = new eui.ArrayCollection();
-	public static areaList: eui.ArrayCollection = new eui.ArrayCollection();
-
+	//世界信息
 	public static infoLists: eui.ArrayCollection[] = [];
-	public static animals: pet.Animal[] = [];
-	public static firstLayer: eui.ArrayCollection = new eui.ArrayCollection();
 
-	public static EVT_SWITCH_PET: string = "switch_pet";
+	//第一级内容，用于展示标签
+	public static level1Data: eui.ArrayCollection = new eui.ArrayCollection();
+	public static petNameList: eui.ArrayCollection = new eui.ArrayCollection();
+	public static shopNameList: eui.ArrayCollection = new eui.ArrayCollection();
+	public static propNameList: eui.ArrayCollection = new eui.ArrayCollection();
+
+	//第二及内容，内容是实体
+	public static level2Data: eui.ArrayCollection = new eui.ArrayCollection();
+	public static animals: eui.ArrayCollection = new eui.ArrayCollection();
+	public static shops: eui.ArrayCollection = new eui.ArrayCollection();
+	public static props: eui.ArrayCollection = new eui.ArrayCollection();
+
+	//状态标识
+	public static menuState: number = 0;
+	public static level1State: number = 0;
+	public static level2State: number = 0;
+
+	public static EVT_CLICK_LEVEL1_ITEM: string = "switch_pet";
 	public static EVT_CHOOSE_MENU_ITEM: string = "change_first_list";
+	public static EVT_LEVEL1_ITEM_CHANGE: string = "level1_item_change";
 }

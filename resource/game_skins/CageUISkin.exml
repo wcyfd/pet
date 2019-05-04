@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="CageUISkin" width="200" height="300" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Scroller width="200" height="300" x="0" y="0" anchorOffsetY="0">
-		<e:List id="petList"/>
-	</e:Scroller>
-</e:Skin>
