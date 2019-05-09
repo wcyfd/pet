@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="MenuUISkin" width="200" height="265" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:TabBar id="menuTabBar" width="200" height="263" x="0" y="0" anchorOffsetY="0">
+<e:Skin class="MenuUISkin" width="215" height="265" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:TabBar id="menuTabBar" width="214" height="263" x="0" y="0" anchorOffsetY="0" anchorOffsetX="0">
 		<e:layout>
-			<e:TileLayout orientation="rows"/>
+			<e:TileLayout/>
 		</e:layout>
+
 	</e:TabBar>
 </e:Skin>

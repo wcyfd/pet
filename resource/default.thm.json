@@ -20,10 +20,7 @@
 		"pet.Level2UI": "resource/game_skins/Level2UISkin.exml",
 		"pet.PetLevel2UI": "resource/game_skins/PetLevel2UISkin.exml",
 		"pet.ShopLevel2UI": "resource/game_skins/ShopLevel2UISkin.exml",
-		"pet.TestUI": "resource/game_skins/TestUISkin.exml",
-		"pet.TabItemUI": "resource/game_skins/TabItemSkin.exml",
-		"pet.KeyValueItemUI": "resource/game_skins/KeyValueItemUISkin.exml",
-		"pet.ShopItemUI": "resource/game_skins/ShopItemUISkin.exml"
+		"pet.KeyValueItemUI": "resource/game_skins/KeyValueItemUISkin.exml"
 	},
 	"autoGenerateExmlsList": true,
 	"exmls": [
@@ -44,13 +41,9 @@
 		"resource/game_skins/KeyValueItemUISkin.exml",
 		"resource/game_skins/Level1UISkin.exml",
 		"resource/game_skins/Level2UISkin.exml",
-		"resource/game_skins/MenuItemUISkin.exml",
 		"resource/game_skins/MenuUISkin.exml",
 		"resource/game_skins/PetLevel2UISkin.exml",
-		"resource/game_skins/ShopItemUISkin.exml",
 		"resource/game_skins/ShopLevel2UISkin.exml",
-		"resource/game_skins/TabItemSkin.exml",
-		"resource/game_skins/TestUISkin.exml",
 		"resource/game_skins/WorldUISkin.exml"
 	],
 	"path": "resource/default.thm.json"

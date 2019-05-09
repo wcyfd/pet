@@ -10,7 +10,6 @@ namespace pet {
 			super.createChildren();
 
 			//赋值菜单数据
-			this.menuTabBar.itemRendererSkinName = MenuItemUISkin;
 			this.menuTabBar.dataProvider = GameData.menuItemList;
 			this.menuTabBar.addEventListener(eui.ItemTapEvent.ITEM_TAP, this.onClickMenuItem, this);
 		}
@@ -31,11 +30,10 @@ namespace pet {
 			GameData.menuState = e.itemIndex;
 
 			this.dispatchEventWith(GameData.EVT_CHOOSE_MENU_ITEM, false, {}, false);
-
 		}
 	}
 
-	export class MenuItemUI extends eui.Component {
+	// export class MenuItemUI extends eui.Component {
 
-	}
+	// }
 }

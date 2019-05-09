@@ -10,8 +10,8 @@ module pet {
 		protected createChildren(): void {
 			super.createChildren();
 
-			this.scene.level1UI.addEventListener(GameData.EVT_CLICK_LEVEL1_ITEM, this.onClickLevel1Item, this);
 			this.scene.menuUI.addEventListener(GameData.EVT_CHOOSE_MENU_ITEM, this.onChangeMenuItem, this);
+			this.scene.level1UI.addEventListener(GameData.EVT_CLICK_LEVEL1_ITEM, this.onClickLevel1Item, this);
 			this.scene.level2UI.addEventListener(GameData.EVT_LEVEL1_ITEM_CHANGE, this.onChangeLevel1Item, this);
 		}
 

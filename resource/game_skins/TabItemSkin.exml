@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="TabItemSkin" width="78" height="29" currentState="up" xmlns:e="http://ns.egret.com/eui" states="down,up" >
-	<e:Label text="{data}" x="0" y="0" anchorOffsetX="0" width="79" anchorOffsetY="0" height="29" textColor="0x000000" textColor.down="0x1e07f9"/>
-</e:Skin>

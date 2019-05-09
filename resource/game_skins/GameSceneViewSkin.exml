@@ -2,7 +2,7 @@
 <e:Skin class="GameSceneViewSkin" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:pet="pet.*" xmlns:w="http://ns.egret.com/wing">
 	<pet:WorldUI id="worldUI" width="20" height="20" x="0" y="0"/>
 
-	<pet:MenuUI id="menuUI" width="18" height="18" x="440" y="721" anchorOffsetX="0" anchorOffsetY="0"/>
+	<pet:MenuUI id="menuUI" width="18" height="18" x="427" y="721" anchorOffsetX="0" anchorOffsetY="0"/>
 
 
 	<pet:Level1UI id="level1UI" width="20" height="20" x="434" y="834"/>
