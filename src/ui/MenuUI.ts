@@ -25,11 +25,10 @@ namespace pet {
 		}
 
 		private onClickMenuItem(e: eui.ItemTapEvent): void {
-			console.log(e.itemIndex);
 
 			GameData.menuState = e.itemIndex;
 
-			this.dispatchEventWith(GameData.EVT_CHOOSE_MENU_ITEM, false, {}, false);
+			this.dispatchEventWith(GameData.CS_EVT_CHOOSE_MENU_ITEM, false, {}, false);
 		}
 	}
 

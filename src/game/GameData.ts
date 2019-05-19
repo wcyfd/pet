@@ -89,7 +89,10 @@ class GameData {
 	public static level1State: number = 0;
 	public static level2State: number = 0;
 
-	public static EVT_CLICK_LEVEL1_ITEM: string = "switch_pet";
-	public static EVT_CHOOSE_MENU_ITEM: string = "change_first_list";
-	public static EVT_LEVEL1_ITEM_CHANGE: string = "level1_item_change";
+	public static CS_EVT_CLICK_LEVEL1_ITEM: string = "cs_switch_pet";
+	public static SC_EVT_CLICK_LEVEL1_ITEM: string = "sc_switch_pet";
+	public static CS_EVT_CHOOSE_MENU_ITEM: string = "cs_change_first_list";
+	public static SC_EVT_CHOOSE_MENU_ITEM: string = "sc_change_first_list";
+	public static CS_EVT_LEVEL1_ITEM_CHANGE: string = "cs_level1_item_change";
+	public static SC_EVT_LEVEL1_ITEM_CHANGE: string = "sc_level1_item_change";
 }

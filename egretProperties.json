@@ -27,5 +27,11 @@
     {
       "name": "promise"
     }
-  ]
+  ],
+  "targets": {
+    "android": {
+      "appname": "动物拯救计划",
+      "packagename": "com.aimfd.pet"
+    }
+  }
 }

@@ -3,10 +3,12 @@ namespace pet {
 	 * 场景切换容器
 	 */
 	export class GameSceneView extends eui.Component {
-		public menuUI: pet.MenuUI;
 		public worldUI: pet.WorldUI;
+		public menuUI: pet.MenuUI;
 		public level1UI: pet.Level1UI;
 		public level2UI: pet.Level2UI;
+		public save: eui.Button;
+		public read: eui.Button;
 
 
 		public petModule: pet.PetModule;
@@ -15,6 +17,18 @@ namespace pet {
 		public constructor() {
 			super();
 			this.petModule = new pet.PetModule();
+		}
+
+
+		private saveRecord(e: egret.Event): void {
+			egret.localStorage.setItem("test", "test1");
+			egret.log("save record");
+		}
+
+		private loadRecord(e: egret.Event): void {
+			let value = egret.localStorage.getItem("test");
+			egret.log("read record=" + value);
+			this.read.label=value;
 		}
 
 		protected createChildren(): void {
@@ -33,6 +47,9 @@ namespace pet {
 
 			this.petModule.scene = this;
 			this.addChild(this.petModule);
+
+			this.save.addEventListener(egret.TouchEvent.TOUCH_TAP, this.saveRecord, this);
+			this.read.addEventListener(egret.TouchEvent.TOUCH_TAP, this.loadRecord, this);
 		}
 
 		protected partAdded(partName: string, instance: any): void {

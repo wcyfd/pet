@@ -14,7 +14,7 @@ module pet {
 			super.createChildren();
 
 			//赋值菜单数据
-			this.module.addEventListener(GameData.EVT_CLICK_LEVEL1_ITEM, this.onClickLevel1Item, this);
+			this.module.addEventListener(GameData.SC_EVT_CLICK_LEVEL1_ITEM, this.onClickLevel1Item, this);
 		}
 
 		public removeChildren(): void {
@@ -26,16 +26,19 @@ module pet {
 		 * 点击了第一层
 		 */
 		public onClickLevel1Item(e: egret.Event): void {
-
+			console.log(egret.getQualifiedClassName(this) + `,uiState=${this.uiState},menuState=${GameData.menuState}`);
 			if (this.uiState != GameData.menuState) {
 				this.changeLevel2UI();
 			}
 
-			this.dispatchEventWith(GameData.EVT_LEVEL1_ITEM_CHANGE, false, {}, false);
+			this.dispatchEventWith(GameData.CS_EVT_LEVEL1_ITEM_CHANGE, false, {}, false);
 		}
 
 		private changeLevel2UI(): void {
+
 			if (this.baseUI) {
+				console.log(egret.getQualifiedClassName(this)+`,removeChild ${egret.getQualifiedClassName(this.baseUI)}`);
+				this.baseUI.removeChildren();//不利用exml添加的组件不会调用removeChildren();
 				this.removeChild(this.baseUI);
 			}
 
