@@ -17,8 +17,9 @@ module pet {
 
 		private changeDataProvider(): void {
 			console.log(egret.getQualifiedClassName(this) + ` ,menuState=${GameData.menuState},level1State=${GameData.level1State}`);
-			let entity = GameData.level2Data.getItemAt(GameData.menuState).getItemAt(GameData.level1State) as ShopItem;
-			this.list.dataProvider = entity.proto.collection;
+			// let entity = GameData.level2Data.getItemAt(GameData.menuState).getItemAt(GameData.level1State) as ShopItem;
+			// this.list.dataProvider = entity.proto.collection;
+			this.list.dataProvider = GameData.convertToCollection("shop");
 		}
 
 		public childrenCreated(): void {
@@ -40,11 +41,11 @@ module pet {
 		}
 
 		private onBuy(): void {
-			let shopItem = GameData.level2Data.getItemAt(GameData.menuState).getItemAt(GameData.level1State) as ShopItem;
-			let prop = new pet.Prop();
-			prop.proto = shopItem.proto;
-			GameData.props.addItem(prop);
-			GameData.propNameList.addItem(prop.proto.name);
+			// let shopItem = GameData.level2Data.getItemAt(GameData.menuState).getItemAt(GameData.level1State) as ShopItem;
+			// let prop = new pet.Prop();
+			// prop.proto = shopItem.proto;
+			// GameData.props.addItem(prop);
+			// GameData.propNameList.addItem(prop.proto.name);
 		}
 	}
 }

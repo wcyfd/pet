@@ -1,0 +1,37 @@
+[
+    {
+        "name": "区域",
+        "target": "area",
+        "clazz": ""
+    },
+    {
+        "name": "商店",
+        "target": "shop",
+        "clazz": "pet.ShopLevel2UI"
+    },
+    {
+        "name": "动物",
+        "target": "animal",
+        "clazz": "pet.PetLevel2UI"
+    },
+    {
+        "name": "赚钱",
+        "target": ""
+    },
+    {
+        "name": "喂食",
+        "target": ""
+    },
+    {
+        "name": "治疗",
+        "target": ""
+    },
+    {
+        "name": "放生",
+        "target": ""
+    },
+    {
+        "name": "抓捕",
+        "target": ""
+    }
+]

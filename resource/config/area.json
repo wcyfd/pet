@@ -1,0 +1,25 @@
+{
+    "tag": "area",
+    "count": 0,
+    "layer1": "name",
+    "proto": {
+        "name": "area"
+    },
+    "comment": {
+        "name": "地区名"
+    },
+    "enum": [
+        {
+            "name": "森林"
+        },
+        {
+            "name": "荒漠"
+        },
+        {
+            "name": "热带雨林"
+        },
+        {
+            "name": "城市"
+        }
+    ]
+}

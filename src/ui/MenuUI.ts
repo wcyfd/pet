@@ -10,7 +10,7 @@ namespace pet {
 			super.createChildren();
 
 			//赋值菜单数据
-			this.menuTabBar.dataProvider = GameData.menuItemList;
+			this.menuTabBar.dataProvider = GameData.menuNames;
 			this.menuTabBar.addEventListener(eui.ItemTapEvent.ITEM_TAP, this.onClickMenuItem, this);
 		}
 

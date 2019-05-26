@@ -25,7 +25,13 @@ module pet {
 		}
 
 		private onClickMenuItem(e: egret.Event): void {
-			let c = GameData.level1Data.getItemAt(GameData.menuState);
+			// let c = GameData.level1Data.getItemAt(GameData.menuState);
+			let menu = GameData.menuItemList.getItemAt(GameData.menuState);
+			let c: eui.ArrayCollection = null;
+			if (menu.target && menu.target != "") {
+				c = GameData.layer1NameList[menu.target];
+			}
+
 			this.list.dataProvider = c;
 			this.list.selectedIndex = -1;
 		}

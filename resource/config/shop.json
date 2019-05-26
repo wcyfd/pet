@@ -1,0 +1,14 @@
+{
+    "tag": "shop",
+    "count": 4,
+    "layer1": "name",
+    "proto": {
+        "name": "item",
+        "price": 1
+    },
+    "comment": {
+        "name": "商品名",
+        "price": "价格"
+    },
+    "enum": []
+}

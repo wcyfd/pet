@@ -37,19 +37,32 @@ module pet {
 		private changeLevel2UI(): void {
 
 			if (this.baseUI) {
-				console.log(egret.getQualifiedClassName(this)+`,removeChild ${egret.getQualifiedClassName(this.baseUI)}`);
+				console.log(egret.getQualifiedClassName(this) + `,removeChild ${egret.getQualifiedClassName(this.baseUI)}`);
 				this.baseUI.removeChildren();//不利用exml添加的组件不会调用removeChildren();
 				this.removeChild(this.baseUI);
 			}
 
-			this.uiState = GameData.menuState;
+			
 
-			switch (GameData.menuState) {
-				case 0: this.baseUI = new pet.PetLevel2UI(); break;
-				case 1: this.baseUI = new pet.ShopLevel2UI(); break;
+			let target = GameData.menuItemList.getItemAt(GameData.menuState).clazz as string;
+			if (target && target != "") {
+				
+				// let clazz = egret.getDefinitionByName(target);
+				this.baseUI = null;
+				if (target == "pet.PetLevel2UI") {
+					this.baseUI = new pet.PetLevel2UI();
+				} else if (target == "pet.ShopLevel2UI") {
+					this.baseUI = new pet.ShopLevel2UI();
+				}
+
+				if (this.baseUI) {
+					this.baseUI.module = this.module;
+					this.addChild(this.baseUI);
+					this.uiState = GameData.menuState;
+				}
+
 			}
-			this.baseUI.module = this.module;
-			this.addChild(this.baseUI);
+
 		}
 
 	}

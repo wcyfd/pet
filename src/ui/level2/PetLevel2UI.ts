@@ -13,9 +13,11 @@ module pet {
 		}
 
 		private changeDataProvider(): void {
-			this.list.dataProvider = GameData.level2Data.getItemAt(GameData.menuState).getItemAt(GameData.level1State).toArrayCollection();
+			this.list.dataProvider = GameData.convertToCollection("animal");
 		}
-		
+
+
+
 		public childrenCreated(): void {
 			super.childrenCreated();
 			this.changeDataProvider();
