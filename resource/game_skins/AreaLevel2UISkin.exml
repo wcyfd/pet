@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="AreaLevel2UISkin" width="400" height="360" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Scroller width="400" height="52" x="0" y="0" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Group id="labels">
+			<e:layout>
+				<e:HorizontalLayout horizontalAlign="contentJustify"/>
+			</e:layout>
+		</e:Group>
+	</e:Scroller>
+	<e:Scroller width="400" height="226" y="54" anchorOffsetX="0" anchorOffsetY="0" x="0">
+		<e:List id="entities" x="17" y="-10.5">
+			<e:layout>
+				<e:VerticalLayout/>
+			</e:layout>
+		</e:List>
+	</e:Scroller>
+	<e:Scroller width="400" height="75" y="285" x="0" anchorOffsetX="0" anchorOffsetY="0" scrollPolicyH="on" scrollPolicyV="off">
+		<e:Group id="buttons">
+			<e:layout>
+				<e:HorizontalLayout horizontalAlign="contentJustify" gap="3"/>
+			</e:layout>
+		</e:Group>
+	</e:Scroller>
+</e:Skin>

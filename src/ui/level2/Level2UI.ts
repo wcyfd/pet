@@ -43,17 +43,23 @@ module pet {
 				this.baseUI = null;
 			}
 
-			
+
 
 			let target = GameData.menuItemList.getItemAt(GameData.menuState).clazz as string;
 			if (target && target != "") {
-				
+
 				// let clazz = egret.getDefinitionByName(target);
-				this.baseUI = null;
-				if (target == "pet.PetLevel2UI") {
-					this.baseUI = new pet.PetLevel2UI();
-				} else if (target == "pet.ShopLevel2UI") {
-					this.baseUI = new pet.ShopLevel2UI();
+				// this.baseUI = null;
+				// if (target == "pet.PetLevel2UI") {
+				// 	this.baseUI = new pet.PetLevel2UI();
+				// } else if (target == "pet.ShopLevel2UI") {
+				// 	this.baseUI = new pet.ShopLevel2UI();
+				// }
+				let clazz = egret.getDefinitionByName(target);
+				try {
+					this.baseUI = new clazz();
+				} catch (e) {
+					console.error(e);
 				}
 
 				if (this.baseUI) {
@@ -61,7 +67,6 @@ module pet {
 					this.addChild(this.baseUI);
 					this.uiState = GameData.menuState;
 				}
-
 			}
 
 		}

@@ -2,7 +2,7 @@
     {
         "name": "区域",
         "target": "area",
-        "clazz": ""
+        "clazz": "pet.AreaLevel2UI"
     },
     {
         "name": "商店",

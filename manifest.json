@@ -30,6 +30,7 @@
 		"bin-debug/ui/WorldUI.js",
 		"bin-debug/ui/level1/Level1ItemUI.js",
 		"bin-debug/ui/level1/Level1UI.js",
+		"bin-debug/ui/level2/AreaLevel2UI.js",
 		"bin-debug/ui/level2/Level2ItemUI.js",
 		"bin-debug/ui/level2/Level2UI.js",
 		"bin-debug/ui/level2/PetLevel2UI.js",
