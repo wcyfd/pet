@@ -40,6 +40,7 @@ module pet {
 				console.log(egret.getQualifiedClassName(this) + `,removeChild ${egret.getQualifiedClassName(this.baseUI)}`);
 				this.baseUI.removeChildren();//不利用exml添加的组件不会调用removeChildren();
 				this.removeChild(this.baseUI);
+				this.baseUI = null;
 			}
 
 			
