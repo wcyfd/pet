@@ -2,7 +2,23 @@
     {
         "name": "区域",
         "target": "area",
-        "clazz": "pet.AreaLevel2UI"
+        "clazz": "pet.AreaLevel2UI",
+        "buttons": [
+            {
+                "name": "b1",
+                "label": "按钮1"
+            }
+        ],
+        "labels": [
+            {
+                "name": "t1",
+                "text": "text1"
+            }
+        ],
+        "display": {
+            "show": false,
+            "attribute": "name"
+        }
     },
     {
         "name": "商店",

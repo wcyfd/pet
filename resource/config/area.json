@@ -4,29 +4,28 @@
     "layer1": "name",
     "proto": {
         "name": "area",
-        "detail":"detail1"
+        "detail": "detail"
     },
     "comment": {
         "name": "地区名",
-        "detail":"描述"
-
+        "detail": "描述"
     },
     "enum": [
         {
             "name": "森林",
-            "detail":"森林"
+            "detail": "森林"
         },
         {
             "name": "荒漠",
-            "detail":"荒漠"
+            "detail": "荒漠"
         },
         {
             "name": "热带雨林",
-            "detail":"热带雨林"
+            "detail": "热带雨林"
         },
         {
             "name": "城市",
-            "detail":"城市"
+            "detail": "城市"
         }
     ]
 }

@@ -15,51 +15,14 @@ class GameData {
 		let menuJSONArray = RES.getRes("menu_json") as Array<any>;
 		menuJSONArray.forEach(menu => {
 			GameData.menuNames.addItem(menu.name);
-			let menuObj = {};
-			for (let key in menu) {
-				menuObj[key] = menu[key];
-			}
-			GameData.menuItemList.addItem(menuObj);
+			GameData.menuItemList.addItem(menu);
 		});
-
-		// GameData.menuItemList.addItem('宠物');
-		// GameData.menuItemList.addItem('商店');
-		// GameData.menuItemList.addItem('背包');
-		// GameData.menuItemList.addItem('繁殖');
 
 		let game_init = RES.getRes("game_init_json");
 		let array = game_init.entity as Array<string>;
 		for (let file of array) {
 			GameData.loadEntity(file);
 		}
-		// GameData.loadEntity("animal_json");
-		// GameData.loadEntity("shop_json");
-
-
-		// for (let i = 0; i < 10; i++) {
-		// 	let a = new pet.Animal();
-		// 	a.name = "name" + i;
-		// 	a.age = 12 + i;
-		// 	a.weight = 10 + i;
-		// 	GameData.animals.addItem(a);
-		// 	GameData.petNameList.addItem(a.name);
-		// }
-
-		// for (let i = 1; i <= 3; i++) {
-		// 	let s = pet.ShopItem.createShopItem(i);
-		// 	GameData.shops.addItem(s);
-		// 	GameData.shopNameList.addItem(s.proto.name);
-		// }
-
-
-		// GameData.level1Data.addItem(GameData.petNameList);
-		// GameData.level1Data.addItem(GameData.shopNameList);
-		// GameData.level1Data.addItem(GameData.propNameList);
-
-		// GameData.level2Data.addItem(GameData.animals);
-		// GameData.level2Data.addItem(GameData.shops);
-		// GameData.level2Data.addItem(GameData.props);
-
 
 	}
 
@@ -68,16 +31,13 @@ class GameData {
 		//实例化
 		let collection1 = new eui.ArrayCollection();
 		let collection2 = new eui.ArrayCollection();
-		let commentObj = {};
 		GameData.layer1NameList[configJSONObject.tag] = collection1;
 		GameData.entityList[configJSONObject.tag] = collection2;
-		GameData.commentList[configJSONObject.tag] = commentObj;
+		GameData.commentList[configJSONObject.tag] = configJSONObject.comment;
+
 
 		let count = configJSONObject.count as number;
-		for (let comment in configJSONObject.comment) {
-			commentObj[comment] = configJSONObject.comment[comment];
-		}
-
+		//根据规范新建
 		for (let i = 0; i < count; i++) {
 			let obj = {};
 			for (let key in configJSONObject.proto) {
@@ -89,19 +49,15 @@ class GameData {
 			collection1.addItem(obj[configJSONObject.layer1]);
 			collection2.addItem(obj);
 		}
+
+		//枚举样板放入
 		if (configJSONObject.enum) {
 			let entityArray = configJSONObject.enum as Array<any>;
 
 			entityArray.forEach(entityJSONObject => {
-				let obj = {};
-				for (let key in entityJSONObject) {
-					obj[key] = entityJSONObject[key];
-
-				}
-				collection1.addItem(obj[configJSONObject.layer1]);
-				collection2.addItem(obj);
-			})
-
+				collection1.addItem(entityJSONObject[configJSONObject.layer1]);
+				collection2.addItem(entityJSONObject);
+			});
 		}
 	}
 
@@ -118,6 +74,16 @@ class GameData {
 		return c;
 	}
 
+
+	public static convertToCollection2(name: string): eui.ArrayCollection {
+		let obj = GameData.entityList[name].getItemAt(GameData.level1State);
+		let c = new eui.ArrayCollection();
+		for (let a in obj) {
+			c.addItem(obj["name"]);
+		}
+
+		return c;
+	}
 
 
 	private static initProto(): void {
