@@ -2,7 +2,6 @@
     {
         "name": "区域",
         "target": "area",
-        "clazz": "pet.AreaLevel2UI",
         "buttons": [
             {
                 "name": "b1",
@@ -18,17 +17,22 @@
         "display": {
             "show": false,
             "attribute": "name"
-        }
+        },
+        "control":"pet.AreaControl"
     },
     {
         "name": "商店",
         "target": "shop",
-        "clazz": "pet.ShopLevel2UI"
+        "display": {
+            "show": true
+        }
     },
     {
         "name": "动物",
         "target": "animal",
-        "clazz": "pet.PetLevel2UI"
+        "display": {
+            "show": true
+        }
     },
     {
         "name": "赚钱",

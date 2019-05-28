@@ -76,11 +76,14 @@ class GameData {
 
 
 	public static convertToCollection2(name: string): eui.ArrayCollection {
-		let obj = GameData.entityList[name].getItemAt(GameData.level1State);
+		let list = GameData.entityList[name];
+		let attribute = GameData.menuItemList.getItemAt(GameData.menuState).display.attribute;
+
 		let c = new eui.ArrayCollection();
-		for (let a in obj) {
-			c.addItem(obj["name"]);
-		}
+		list.source.forEach(e => {
+			let name = e[attribute];
+			c.addItem(name);
+		})
 
 		return c;
 	}

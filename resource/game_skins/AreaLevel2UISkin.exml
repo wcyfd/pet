@@ -7,15 +7,15 @@
 			</e:layout>
 		</e:Group>
 	</e:Scroller>
-	<e:Scroller width="400" height="226" y="54" anchorOffsetX="0" anchorOffsetY="0" x="0">
-		<e:List id="entities" x="17" y="-10.5">
+	<e:Scroller width="400" height="221" y="54" anchorOffsetX="0" anchorOffsetY="0" x="0">
+		<e:List id="entities" x="-129" y="-72" anchorOffsetY="0" height="223">
 			<e:layout>
 				<e:VerticalLayout/>
 			</e:layout>
 		</e:List>
 	</e:Scroller>
-	<e:Scroller width="400" height="75" y="285" x="0" anchorOffsetX="0" anchorOffsetY="0" scrollPolicyH="on" scrollPolicyV="off">
-		<e:Group id="buttons">
+	<e:Scroller width="400" height="83" y="277" x="0" anchorOffsetX="0" anchorOffsetY="0" scrollPolicyH="on" scrollPolicyV="off">
+		<e:Group id="buttons" anchorOffsetY="0" height="78" x="65" y="24">
 			<e:layout>
 				<e:HorizontalLayout horizontalAlign="contentJustify" gap="3"/>
 			</e:layout>

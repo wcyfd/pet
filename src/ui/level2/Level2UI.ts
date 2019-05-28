@@ -7,7 +7,6 @@ module pet {
 		public constructor() {
 			super();
 			this.uiState = -1;
-
 		}
 
 		protected createChildren(): void {
@@ -43,32 +42,10 @@ module pet {
 				this.baseUI = null;
 			}
 
-
-
-			let target = GameData.menuItemList.getItemAt(GameData.menuState).clazz as string;
-			if (target && target != "") {
-
-				// let clazz = egret.getDefinitionByName(target);
-				// this.baseUI = null;
-				// if (target == "pet.PetLevel2UI") {
-				// 	this.baseUI = new pet.PetLevel2UI();
-				// } else if (target == "pet.ShopLevel2UI") {
-				// 	this.baseUI = new pet.ShopLevel2UI();
-				// }
-				let clazz = egret.getDefinitionByName(target);
-				try {
-					this.baseUI = new clazz();
-				} catch (e) {
-					console.error(e);
-				}
-
-				if (this.baseUI) {
-					this.baseUI.module = this.module;
-					this.addChild(this.baseUI);
-					this.uiState = GameData.menuState;
-				}
-			}
-
+			this.baseUI = new AreaLevel2UI();
+			this.baseUI.module = this.module;
+			this.addChild(this.baseUI);
+			this.uiState = GameData.menuState;
 		}
 
 	}
