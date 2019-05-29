@@ -30,7 +30,7 @@
   ],
   "targets": {
     "android": {
-      "appname": "动物拯救计划",
+      "appname": "动物",
       "packagename": "com.aimfd.pet"
     }
   }

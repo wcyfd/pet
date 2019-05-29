@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,bg_jpg,egret_icon_png,description_json,menu_json,shop_json,area_json,game_init_json,wildAnimal_json,tameAnimal_json",
+			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,bg_jpg,egret_icon_png,description_json,menu_json,shop_json,area_json,game_init_json,tameAnimal_json,forestAnimal_json,cityAnimal_json,hotAnimal_json,desertAnimal_json",
 			"name": "preload"
 		}
 	],
@@ -157,14 +157,29 @@
 			"url": "config/game_init.json"
 		},
 		{
-			"name": "wildAnimal_json",
-			"type": "json",
-			"url": "config/wildAnimal.json"
-		},
-		{
 			"name": "tameAnimal_json",
 			"type": "json",
 			"url": "config/tameAnimal.json"
+		},
+		{
+			"name": "forestAnimal_json",
+			"type": "json",
+			"url": "config/forestAnimal.json"
+		},
+		{
+			"name": "cityAnimal_json",
+			"type": "json",
+			"url": "config/cityAnimal.json"
+		},
+		{
+			"name": "hotAnimal_json",
+			"type": "json",
+			"url": "config/hotAnimal.json"
+		},
+		{
+			"name": "desertAnimal_json",
+			"type": "json",
+			"url": "config/desertAnimal.json"
 		}
 	]
 }

@@ -1,7 +1,10 @@
 {
     "entity": [
         "tameAnimal_json",
-        "wildAnimal_json",
+        "forestAnimal_json",
+        "cityAnimal_json",
+        "hotAnimal_json",
+        "desertAnimal_json",
         "area_json",
         "shop_json"
     ]

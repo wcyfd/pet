@@ -1,6 +1,6 @@
 {
-    "tag": "wildAnimal",
-    "count": 9,
+    "tag": "cityAnimal",
+    "count": 0,
     "layer1": "name",
     "proto": {
         "age": 20,
@@ -16,12 +16,17 @@
         {
             "age": 100,
             "weight": 96,
-            "name": "keji"
+            "name": "鼠"
         },
         {
             "age": 101,
             "weight": 97,
-            "name": "samoye"
+            "name": "狗"
+        },
+        {
+            "age": 101,
+            "weight": 97,
+            "name": "猫"
         }
     ]
 }

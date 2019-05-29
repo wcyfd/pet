@@ -2,6 +2,7 @@ module pet {
 	export class CatchControl extends pet.AbstractControl {
 		private catch: eui.Button;
 		private targetIndex: number;
+		private animalType: string;
 		public constructor() {
 			super();
 
@@ -31,17 +32,23 @@ module pet {
 			if (true) {
 				let index = this.targetIndex;
 				this.targetIndex = -1;
-				let menu = GameData.menuItemList.getItemAt(GameData.menuState);
-
-				let wildAnimal = GameData.removeItemAt(menu.display.attribute, index);
-				GameData.addItem("tameAnimal", wildAnimal, "name");
-			} else {
-
+				let animal = GameData.removeItemAt(this.animalType, index);
+				GameData.addItem("tameAnimal", animal, "name");
 			}
 		}
 
 		public onListItem(e: eui.ItemTapEvent) {
 			this.targetIndex = this.getList().selectedIndex;
+		}
+
+		public onClickItem1(): void {
+			super.onClickItem1();
+
+			let area = GameData.entityList["area"].getItemAt(GameData.level1State);
+			this.animalType = area.relateAnimal;
+			this.getList().dataProvider = GameData.layer1NameList[area.relateAnimal];
+			this.getList().selectedIndex = this.targetIndex = -1;
+			// GameData.entityList[area.relateAnimal];
 		}
 	}
 }

@@ -1,26 +1,5 @@
 [
     {
-        "name": "区域",
-        "target": "area",
-        "buttons": [
-            {
-                "name": "b1",
-                "label": "按钮1"
-            }
-        ],
-        "labels": [
-            {
-                "name": "t1",
-                "text": "text1"
-            }
-        ],
-        "display": {
-            "show": false,
-            "attribute": "area"
-        },
-        "control": "pet.AreaControl"
-    },
-    {
         "name": "商店",
         "target": "shop",
         "buttons": [

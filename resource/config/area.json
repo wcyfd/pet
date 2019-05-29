@@ -13,19 +13,23 @@
     "enum": [
         {
             "name": "森林",
-            "detail": "森林"
+            "detail": "森林",
+            "relateAnimal": "forestAnimal"
         },
         {
             "name": "荒漠",
-            "detail": "荒漠"
+            "detail": "荒漠",
+            "relateAnimal": "desertAnimal"
         },
         {
             "name": "热带雨林",
-            "detail": "热带雨林"
+            "detail": "热带雨林",
+            "relateAnimal": "hotAnimal"
         },
         {
             "name": "城市",
-            "detail": "城市"
+            "detail": "城市",
+            "relateAnimal": "cityAnimal"
         }
     ]
 }

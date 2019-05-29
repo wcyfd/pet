@@ -67,6 +67,7 @@ module pet {
 			let menu = GameData.menuItemList.getItemAt(GameData.menuState);
 			this.entities.dataProvider = menu.display && menu.display.show ? GameData.convertToCollection(menu.target) : GameData.convertToCollection2(menu.target);
 
+			if (this.control) this.control.onClickItem1();
 		}
 	}
 }

@@ -1,0 +1,27 @@
+{
+    "tag": "hotAnimal",
+    "count": 0,
+    "layer1": "name",
+    "proto": {
+        "age": 20,
+        "weight": 120,
+        "name": "name"
+    },
+    "comment": {
+        "name": "姓名",
+        "age": "年龄",
+        "weight": "体重"
+    },
+    "enum": [
+        {
+            "age": 100,
+            "weight": 96,
+            "name": "鳄鱼"
+        },
+        {
+            "age": 101,
+            "weight": 97,
+            "name": "食人鱼"
+        }
+    ]
+}

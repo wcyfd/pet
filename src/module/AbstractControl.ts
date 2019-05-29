@@ -16,5 +16,9 @@ module pet {
 		public getList(): eui.List {
 			return this.ui.entities;
 		}
+
+		public onClickItem1(): void {
+
+		}
 	}
 }
