@@ -10,12 +10,13 @@ namespace pet {
 		public save: eui.Button;
 		public read: eui.Button;
 
-
+		public worldModule: pet.WorldModule;
 		public petModule: pet.PetModule;
-
 
 		public constructor() {
 			super();
+
+			this.worldModule = new pet.WorldModule();
 			this.petModule = new pet.PetModule();
 		}
 
@@ -28,7 +29,7 @@ namespace pet {
 		private loadRecord(e: egret.Event): void {
 			let value = egret.localStorage.getItem("test");
 			egret.log("read record=" + value);
-			this.read.label=value;
+			this.read.label = value;
 		}
 
 		protected createChildren(): void {
@@ -45,8 +46,13 @@ namespace pet {
 			back.graphics.drawRect(0, 0, GameData.width, GameData.height);
 			back.graphics.endFill();
 
+
 			this.petModule.scene = this;
 			this.addChild(this.petModule);
+
+			this.worldModule.scene = this;
+			this.addChild(this.worldModule);
+
 
 			this.save.addEventListener(egret.TouchEvent.TOUCH_TAP, this.saveRecord, this);
 			this.read.addEventListener(egret.TouchEvent.TOUCH_TAP, this.loadRecord, this);
@@ -62,32 +68,10 @@ namespace pet {
 
 				console.info(partName + " bind module");
 			}
-
-			// if (partName == "attributeUI") {
-			// 	this.attributeUI.module = this.petModule;
-			// }
-
-			// if (partName == "menuUI") {
-			// 	this.menuUI.module = this.petModule;
-			// }
-
-			// if (partName == "worldUI") {
-			// 	this.worldUI.module = this.petModule;
-			// }
-
-			// if (partName == "level1UI") {
-			// 	this.level1UI.module = this.petModule;
-			// }
-
-			// if (partName == "switchUI") {
-			// 	this.switchUI.module = this.petModule;
-			// }
-			// console.log(partName);
 		}
 
 		protected childrenCreated(): void {
 			super.childrenCreated();
-			console.log("gamesceneview childrenCreated");
 		}
 
 	}

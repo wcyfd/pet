@@ -19,9 +19,6 @@ module pet {
 
 		protected childrenCreated(): void {
 			super.childrenCreated();
-
-			this.list.dataProvider = GameData.level1Data.getItemAt(0);
-			this.list.selectedIndex = -1;
 		}
 
 		private onClickMenuItem(e: egret.Event): void {

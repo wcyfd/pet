@@ -16,23 +16,57 @@
         ],
         "display": {
             "show": false,
-            "attribute": "name"
+            "attribute": "area"
         },
-        "control":"pet.AreaControl"
+        "control": "pet.AreaControl"
     },
     {
         "name": "商店",
         "target": "shop",
+        "buttons": [
+            {
+                "name": "buy",
+                "label": "购买"
+            }
+        ],
+        "labels": [
+            {
+                "name": "money",
+                "text": "0"
+            }
+        ],
         "display": {
             "show": true
         }
     },
     {
         "name": "动物",
-        "target": "animal",
+        "target": "tameAnimal",
+        "buttons": [
+            {
+                "name": "b1",
+                "label": "按钮1"
+            }
+        ],
         "display": {
-            "show": true
+            "show": true,
+            "attribute": "tameAnimal"
         }
+    },
+    {
+        "name": "抓捕",
+        "target": "area",
+        "buttons": [
+            {
+                "name": "catch",
+                "label": "抓捕"
+            }
+        ],
+        "display": {
+            "show": false,
+            "attribute": "wildAnimal"
+        },
+        "control": "pet.CatchControl"
     },
     {
         "name": "赚钱",
@@ -48,10 +82,6 @@
     },
     {
         "name": "放生",
-        "target": ""
-    },
-    {
-        "name": "抓捕",
         "target": ""
     }
 ]

@@ -6,7 +6,9 @@
 
 
 	<pet:Level1UI id="level1UI" width="20" height="20" x="434" y="834"/>
-	<pet:Level2UI id="level2UI" width="20" height="20" x="11.85" y="753.21"/>
+	<pet:Level2UI id="level2UI" width="20" height="20" x="5.85" y="753.21"/>
 	<e:Button id="save" label="记录保存" x="540" y="643.73"/>
 	<e:Button id="read" label="读记录" x="434" y="643.73"/>
+
+
 </e:Skin>

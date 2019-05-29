@@ -31,8 +31,4 @@ namespace pet {
 			this.dispatchEventWith(GameData.CS_EVT_CHOOSE_MENU_ITEM, false, {}, false);
 		}
 	}
-
-	// export class MenuItemUI extends eui.Component {
-
-	// }
 }

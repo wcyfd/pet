@@ -5,9 +5,6 @@ class GameData {
 		GameData.height = layer.stage.stageHeight;
 		console.log(`宽度 ${GameData.width}, 高度 ${GameData.height}`);
 
-		for (let i = 0; i < GameData.petNameList.length; i++) {
-			GameData.infoLists[0] = new eui.ArrayCollection(["something"]);
-		}
 
 
 		GameData.initProto();
@@ -61,6 +58,16 @@ class GameData {
 		}
 	}
 
+	public static removeItemAt(name: string, index: number): any {
+		GameData.layer1NameList[name].removeItemAt(index);
+		return GameData.entityList[name].removeItemAt(index);
+	}
+
+	public static addItem(name: string, obj: any, attributeName: string) {
+		GameData.layer1NameList[name].addItem(obj[attributeName]);
+		GameData.entityList[name].addItem(obj);
+	}
+
 	public static convertToCollection(name: string): eui.ArrayCollection {
 		let obj = GameData.entityList[name].getItemAt(GameData.level1State);
 		let c = new eui.ArrayCollection();
@@ -76,16 +83,9 @@ class GameData {
 
 
 	public static convertToCollection2(name: string): eui.ArrayCollection {
-		let list = GameData.entityList[name];
-		let attribute = GameData.menuItemList.getItemAt(GameData.menuState).display.attribute;
-
-		let c = new eui.ArrayCollection();
-		list.source.forEach(e => {
-			let name = e[attribute];
-			c.addItem(name);
-		})
-
-		return c;
+		let menu = GameData.menuItemList.getItemAt(GameData.menuState);
+		let attribute = menu.display.attribute;
+		return GameData.layer1NameList[attribute];
 	}
 
 
@@ -117,21 +117,10 @@ class GameData {
 	public static infoLists: eui.ArrayCollection[] = [];
 
 	//第一级内容，用于展示标签
-	public static level1Data: eui.ArrayCollection = new eui.ArrayCollection();
-	public static petNameList: eui.ArrayCollection = new eui.ArrayCollection();
-	public static shopNameList: eui.ArrayCollection = new eui.ArrayCollection();
-	public static propNameList: eui.ArrayCollection = new eui.ArrayCollection();
-
 	public static layer1NameList: { [key: string]: eui.ArrayCollection } = {};
 
 	//第二及内容，内容是实体
-	public static level2Data: eui.ArrayCollection = new eui.ArrayCollection();
-	public static animals: eui.ArrayCollection = new eui.ArrayCollection();
-	public static shops: eui.ArrayCollection = new eui.ArrayCollection();
-	public static props: eui.ArrayCollection = new eui.ArrayCollection();
-
 	public static entityList: { [key: string]: eui.ArrayCollection } = {};
-
 	public static commentList: { [key: string]: {} } = {};
 
 	//状态标识

@@ -42,7 +42,7 @@ module pet {
 				this.baseUI = null;
 			}
 
-			this.baseUI = new AreaLevel2UI();
+			this.baseUI = new Level2ChildUI();
 			this.baseUI.module = this.module;
 			this.addChild(this.baseUI);
 			this.uiState = GameData.menuState;

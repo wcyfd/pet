@@ -1,11 +1,11 @@
 module pet {
-	export class AreaLevel2UI extends pet.BaseUI {
+	export class Level2ChildUI extends pet.BaseUI {
 
 		public labels: eui.Group;
 		public entities: eui.List;
 		public buttons: eui.Group;
 
-		public controlEntity: pet.AbstractControl;
+		public control: pet.AbstractControl;
 
 		public constructor() {
 			super();
@@ -24,8 +24,10 @@ module pet {
 				for (let labelConfig of menu.labels) {
 					let label = new eui.Label();
 					label.textColor = 0x00000;
-					label.text = labelConfig.text;
 					label.name = labelConfig.name;
+					if (labelConfig.text) {
+						label.text = labelConfig.text;
+					}
 
 					this.labels.addChild(label);
 				}
@@ -43,10 +45,10 @@ module pet {
 
 			if (menu.control) {
 				let controlClazz = egret.getDefinitionByName(menu.control);
-				this.controlEntity = new controlClazz();
-				this.controlEntity.ui = this;
+				this.control = new controlClazz();
+				this.control.ui = this;
 
-				this.addChild(this.controlEntity);
+				this.addChild(this.control);
 			}
 
 			this.module.addEventListener(GameData.SC_EVT_LEVEL1_ITEM_CHANGE, this.onClickLevel1Item, this);
@@ -54,8 +56,8 @@ module pet {
 
 		public removeChildren(): void {
 			super.removeChildren();
-			if (this.controlEntity)
-				this.controlEntity.removeChildren();
+			if (this.control)
+				this.control.removeChildren();
 
 			this.module.removeEventListener(GameData.SC_EVT_LEVEL1_ITEM_CHANGE, this.onClickLevel1Item, this);
 		}
