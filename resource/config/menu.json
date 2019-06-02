@@ -48,6 +48,21 @@
         "control": "pet.CatchControl"
     },
     {
+        "name": "放生",
+        "target": "tameAnimal",
+        "buttons": [
+            {
+                "name": "free",
+                "label": "放生"
+            }
+        ],
+        "display": {
+            "show": false,
+            "attribute": "area"
+        },
+        "control": "pet.FreeControl"
+    },
+    {
         "name": "赚钱",
         "target": ""
     },
@@ -57,10 +72,6 @@
     },
     {
         "name": "治疗",
-        "target": ""
-    },
-    {
-        "name": "放生",
         "target": ""
     }
 ]
