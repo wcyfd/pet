@@ -5,12 +5,16 @@
     "proto": {
         "age": 20,
         "weight": 120,
-        "name": "name"
+        "name": "name",
+        "hp":100,
+        "tame":0
     },
     "comment": {
         "name": "姓名",
         "age": "年龄",
-        "weight": "体重"
+        "weight": "体重",
+        "hp":"血量",
+        "tame":"驯养值"
     },
     "enum": []
 }

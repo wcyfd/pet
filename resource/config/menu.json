@@ -23,8 +23,8 @@
         "target": "tameAnimal",
         "buttons": [
             {
-                "name": "b1",
-                "label": "按钮1"
+                "name": "cure",
+                "label": "治疗"
             }
         ],
         "display": {
@@ -39,6 +39,10 @@
             {
                 "name": "catch",
                 "label": "抓捕"
+            },
+            {
+                "name": "cure",
+                "label": "治疗"
             }
         ],
         "display": {
