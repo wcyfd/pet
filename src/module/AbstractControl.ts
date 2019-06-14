@@ -1,6 +1,8 @@
 module pet {
 	export class AbstractControl extends eui.Component {
 		public ui: pet.Level2ChildUI;
+		public menuTarget: any;
+		public menuDisplay: any;
 
 		private buttonListeners = [];
 		public constructor() {
@@ -21,6 +23,10 @@ module pet {
 
 		public onClickItem1(): void {
 
+		}
+
+		public refreshList(): void {
+			this.ui.refreshList(this.menuTarget, this.menuDisplay);
 		}
 
 

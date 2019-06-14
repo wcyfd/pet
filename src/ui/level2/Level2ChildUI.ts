@@ -67,7 +67,15 @@ module pet {
 			let menu = GameData.menuItemList.getItemAt(GameData.menuState);
 			this.entities.dataProvider = menu.display && menu.display.show ? GameData.convertToCollection(menu.target) : GameData.convertToCollection2(menu.target);
 
-			if (this.control) this.control.onClickItem1();
+			if (this.control) {
+				this.control.menuTarget = menu.target;
+				this.control.menuDisplay = menu.display;
+				this.control.onClickItem1();
+			}
+		}
+
+		public refreshList(target: any, display: any) {
+			this.entities.dataProvider = display && display.show ? GameData.convertToCollection(target) : GameData.convertToCollection2(target);
 		}
 	}
 }

@@ -25,12 +25,25 @@
             {
                 "name": "cure",
                 "label": "治疗"
+            },
+            {
+                "name": "feed",
+                "label": "喂食"
+            },
+            {
+                "name": "play",
+                "label": "玩耍"
+            },
+            {
+                "name": "rename",
+                "label": "重命名"
             }
         ],
         "display": {
             "show": true,
             "attribute": "tameAnimal"
-        }
+        },
+        "control": "pet.TameControl"
     },
     {
         "name": "抓捕",
@@ -43,6 +56,10 @@
             {
                 "name": "cure",
                 "label": "治疗"
+            },
+            {
+                "name": "attack",
+                "label": "攻击"
             }
         ],
         "display": {
