@@ -1,10 +1,15 @@
 module pet {
 	export class WorldModule extends eui.Component {
 		public scene: pet.GameSceneView;
-		public timer: egret.Timer;
+		public tameTimer: egret.Timer;
+		public breedTimer: egret.Timer;
 
 		public constructor() {
 			super();
+		}
+
+		public onTameUpdate(e: egret.TimerEvent) {
+			this.tameAdd();
 		}
 
 		private tameAdd(): void {
@@ -17,13 +22,17 @@ module pet {
 			}
 		}
 
-		private breed(areaName?: string): void {
+		private onBreedUpdate(e: egret.Event) {
+			this.onBreed();
+		}
+
+		private onBreed(areaName?: string): void {
 			if (!areaName) {
-				this.breed("cityAnimal");
-				this.breed("desertAnimal");
-				this.breed("forestAnimal");
-				this.breed("hotAnimal");
-				this.breed("tameAnimal");
+				this.onBreed("cityAnimal");
+				this.onBreed("desertAnimal");
+				this.onBreed("forestAnimal");
+				this.onBreed("hotAnimal");
+				this.onBreed("tameAnimal");
 				return;
 			}
 
@@ -37,6 +46,7 @@ module pet {
 				let animal = animals.getItemAt(i);
 				let name = animal.name as string;
 				name = name.split(" ")[0];
+				name = name.substr(1, name.length - 1);
 				let sexAnimal = null;
 				if (animal.sex == "公") {
 					sexAnimal = maleAnimals;
@@ -64,7 +74,7 @@ module pet {
 							if (femaleArray.length > 0) {
 								let femaleAnimal = femaleArray.splice(MathUtil.randomContainMin(0, femaleArray.length), 1)[0];
 
-								this.onBreed(areaName, name, maleAnimal, femaleAnimal);
+								this.breed(areaName, name, maleAnimal, femaleAnimal);
 
 							}
 						}
@@ -76,11 +86,11 @@ module pet {
 
 		}
 
-		private onBreed(areaName: string, name: string, male: {}, female: {}) {
+		private breed(areaName: string, name: string, male: {}, female: {}) {
 			let sex = MathUtil.randomBoolean() ? "公" : "母";
 
 			let animal = {};
-			name = sex + name.substr(1, name.length - 1);
+			name = sex + name;
 			animal["age"] = 1;
 			animal["weight"] = MathUtil.randomContainMinMax(1, 10);
 			animal["name"] = name;
@@ -88,7 +98,7 @@ module pet {
 			animal["tame"] = 0;
 			animal["sex"] = name;
 
-			GameData.addItem("areaName", animal, "name");
+			GameData.addItem(areaName, animal, "name");
 
 
 			// "age": 100,
@@ -102,20 +112,18 @@ module pet {
 		public createChildren(): void {
 			super.createChildren();
 
-			this.timer = new egret.Timer(10000, 0);
-			this.timer.addEventListener(egret.TimerEvent.TIMER, this.onUpdate, this);
+			this.tameTimer = new egret.Timer(10000, 0);
+			this.tameTimer.addEventListener(egret.TimerEvent.TIMER, this.onTameUpdate, this);
+
+			this.breedTimer = new egret.Timer(60000, 0);
+			this.breedTimer.addEventListener(egret.TimerEvent.TIMER, this.onBreedUpdate, this);
 		}
 
 		public childrenCreated() {
 			super.childrenCreated();
 
-			this.timer.start();
-		}
-
-		public onUpdate(e: egret.TimerEvent) {
-			this.tameAdd();
-			this.breed();
-
+			this.tameTimer.start();
+			this.breedTimer.start();
 		}
 	}
 }
